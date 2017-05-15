@@ -21,7 +21,7 @@ class Comments extends Migration
         $table->string('email');
         $table->timestamps();
         $table->softDeletes();
-        $table->string('preview');
+        $table->string('preview')->nullable();
         });
     }
 

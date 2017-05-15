@@ -36,7 +36,7 @@
 			
 			<div class="myBtnGroup">  			
   				<button onclick="location.href='{{action('ArticlesController@edit',['articles'=>$article->id])}}'">Редагувати</button>
-				<button onclick="location.href='{{action('ArticlesController@show',['articles'=>$article->id])}}'">Читати</button>
+				<button onclick="location.href='{{action('FrontController@show',['articles'=>$article->id])}}'">Читати</button>
 			 		
 				@if($article->deleted_at)
 					<input type="button" onclick="location.href='{{action('ArticlesController@restore',['id'=>$article->id])}}'" name="restore" value="Поновити">

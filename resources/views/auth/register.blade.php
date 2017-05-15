@@ -64,8 +64,8 @@
                             <label for="group" class="col-md-4 control-label">Group</label>
 
                             <div class="col-md-6">
-                                <input id="admin" type="radio" name="group" required checked="checked" value="admin">admin<br>
-                                <input id="user" type="radio" name="group" required checked="checked" value="user">user
+                                <input id="admin" type="radio" name="group" required checked="checked" value="admin">Блогер<br>
+                                <input id="user" type="radio" name="group" required checked="checked" value="user">Читач
 
                             </div>
                         </div>

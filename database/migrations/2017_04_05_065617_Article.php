@@ -18,8 +18,8 @@ class Article extends Migration
          $table->increments('id');
          $table->string('title');
          $table->text('content');
-         $table->string('preview');
-         $table->string('category_id');
+         $table->string('preview')->nullable();
+         $table->string('category_id')->nullable();
          $table->timestamps();
          $table->softDeletes();
         });
