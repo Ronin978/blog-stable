@@ -14,7 +14,6 @@
 Route::get('/', 'FrontController@index');
 Route::get('/show/{id}', 'FrontController@show');
 Route::get('/filter/{filter}', 'FrontController@sort');
-Route::get('/print/{id}', 'FrontController@pagePrint');
 Route::post('/show/{id}', 'CommentsController@save');
 
 

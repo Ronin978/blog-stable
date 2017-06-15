@@ -91,13 +91,6 @@ class FrontController extends Controller
 		return view('site.show',['article'=>$article,'comments'=>$comments,'next'=>$next,'back'=>$back]);
 		
 	}
-
-	public function pagePrint($id)
-	{
-		$article=Article::withTrashed()->find($id);
-			
-		return view('site.print',['article'=>$article]);
-	}
 	
 	
 	

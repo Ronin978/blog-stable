@@ -30,10 +30,10 @@
 
 @foreach($articles as $article)
 
-	<h1>{{$article->title}}</h1>
+	<h1><a href="{{action('FrontController@show',['articles'=>$article->id])}}" title="Читати далі...">{{$article->title}}</a></h1>
 	<br>
 		@if ($article->preview)
-			<img height=40 src={{$article->preview}}>;
+			<img height=40 src="{{$article->preview}}">;
 		@endif
 	<div>
 		{{str_limit(strip_tags($article->content) , 1500)}}
