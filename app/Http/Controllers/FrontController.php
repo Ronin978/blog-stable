@@ -85,17 +85,18 @@ class FrontController extends Controller
 		}
 		else {$next=1;}
 
-		if (!Article::find($id)) {
-			$next=1;
-			$back=1;
-		}
-
-
 		$comments=Article::withTrashed()->find($id)->comments;
 		$article=Article::withTrashed()->find($id);
 			
 		return view('site.show',['article'=>$article,'comments'=>$comments,'next'=>$next,'back'=>$back]);
 		
+	}
+
+	public function pagePrint($id)
+	{
+		$article=Article::withTrashed()->find($id);
+			
+		return view('site.print',['article'=>$article]);
 	}
 	
 	
